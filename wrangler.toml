@@ -1,0 +1,12 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "jazelle-furniture"
+compatibility_date = "2026-11-10"
+
+# Cloudflare Pages — this project is a fully static export (no functions),
+# so the whole deployment is the ./out folder. `wrangler pages deploy`
+# reads this file and pushes ./out straight to your Pages project.
+
+pages_build_output_dir = "out"
+
+# No environment variables needed — the cart is client-side and checkout
+# goes through WhatsApp links. Add any future secrets under [vars].
